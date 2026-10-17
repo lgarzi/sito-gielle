@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -25,11 +25,10 @@
 
 <div class="site" id="top">
 
-<header class="header" id="hdr">
+<header class="header header--init" id="hdr">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Gielle S.r.l. – Home">
-      <svg viewBox="0 0 187.78 211.13" aria-hidden="true"><use href="#gl"/></svg>
-      <span class="brand-name">Gielle</span>
+      <img class="brand-mark" src="assets/logo/gielle-logo-istituzionale.svg" alt="Gielle S.r.l." width="52" height="66">
     </a>
     <nav class="nav" aria-label="Menu principale">
       <a href="index.html" aria-current="page">Home</a>
@@ -55,12 +54,21 @@
 
 <main>
 <section class="hero hero-home" aria-labelledby="hero-title">
-  <div class="hero-media" role="img" aria-label="Tornitura CNC di un albero in acciaio"></div>
-  <span class="ph-tag">Segnaposto · foto o video di tornitura CNC</span>
+  <div class="hero-media" role="img" aria-label="Officina meccanica di precisione Gielle"></div>
+  <span class="ph-tag">Officina meccanica di precisione · Scandicci (FI)</span>
   <div class="wrap">
-    <p class="hero-kicker">Gielle S.r.l. · Scandicci, Firenze</p>
-    <h1 id="hero-title">Meccanica di precisione su <em>acciai speciali</em> e superleghe</h1>
-    <p class="hero-claim">Dal disegno al pezzo collaudato.</p>
+    <p class="hero-kicker">Gielle S.r.l. · Meccanica di precisione</p>
+    <h1 id="hero-title">Lavorazioni CNC su <em>materiali speciali</em> e componenti critici</h1>
+    <p class="hero-claim">Dal disegno al collaudo: pezzi meccanici di alta precisione per settori ad alta richiesta tecnologica.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-lime" href="pagine/tecnologie.html">Scopri le tecnologie <svg><use href="#arrow"/></svg></a>
+      <a class="btn btn-ghost" href="pagine/contatti.html">Contattaci <svg><use href="#arrow"/></svg></a>
+    </div>
+    <ul class="hero-stats" aria-label="Valori aziendali">
+      <li><strong>1980</strong><span>fondata</span></li>
+      <li><strong>30+</strong><span>macchine CNC</span></li>
+      <li><strong>ISO</strong><span>9001 e collaudi interni</span></li>
+    </ul>
     <div class="hero-foot">
       <span>Dal 1980</span>
       <a class="scrollcue" href="#azienda"><i></i>Scorri</a>
@@ -71,14 +79,15 @@
 <section class="split h-about" id="azienda" aria-labelledby="about-title">
   <div class="wrap split-grid">
     <div class="rv">
-      <span class="eyebrow">Che cosa facciamo</span>
-      <h2 id="about-title">Da oltre 45 anni</h2>
-      <p class="lead">Lavoriamo conto terzi acciai da costruzione, inossidabili, superleghe, forgiati e leghe leggere per l’industria energetica, siderurgica, idraulica, navale e aerospaziale. Seguiamo ogni pezzo dall’acquisto della materia prima fino al collaudo finale.</p>
+      <span class="eyebrow">La nostra missione</span>
+      <h2 id="about-title">Officina meccanica di precisione dal 1980</h2>
+      <p class="lead">Gielle S.r.l. realizza lavorazioni conto terzi su acciai da costruzione, inox, superleghe, forgiati e leghe leggere, con una forte attenzione alla qualità dei materiali, ai processi e al collaudo finale.</p>
+      <p class="lead">Il nostro laboratorio interno permette di verificare resistenza, durezza, trazione e non distruttivi con personale qualificato, per garantire standard elevati anche sui componenti più impegnativi.</p>
       <a class="btn btn-ink" href="pagine/storia.html">Scopri l’azienda <svg><use href="#arrow"/></svg></a>
     </div>
     <div class="media tall rv" style="background-image:url(assets/img/carriere.jpg)" role="img" aria-label="Reparto produttivo Gielle">
       <span class="corner" aria-hidden="true"></span>
-      <span class="ph-tag">Segnaposto · officina Gielle</span>
+      <span class="ph-tag">Laboratorio e collaudo</span>
     </div>
   </div>
 </section>
@@ -157,6 +166,18 @@
   </div>
 </section>
 
+<section class="world-sec" aria-labelledby="world-title">
+  <div class="wrap world rv">
+    <div class="world-head">
+      <span class="eyebrow">Nel mondo</span>
+      <h2 id="world-title">I nostri componenti lavorano in <span data-paesi-count>8</span> paesi</h2>
+      <p>Dalla sede di Scandicci forniamo pezzi finiti e collaudati a clienti in Europa e nel resto del mondo.</p>
+    </div>
+    <div class="world-map" data-sede="IT" data-paesi="FR,DE,GB,US,BR,AE,CN" role="img" aria-label="Mappa del mondo con i paesi in cui lavorano i componenti Gielle"></div>
+    <ul class="world-list" aria-label="Paesi"></ul>
+  </div>
+</section>
+
 <section class="clients" aria-labelledby="cl-title">
   <div class="wrap">
     <div class="sec-head rv">
@@ -167,18 +188,22 @@
       <p>Dalle turbomacchine alle presse, dai cuscinetti agli impianti siderurgici: le aziende che si sono affidate a noi.</p>
     </div>
   </div>
+  <div class="cl-tapes">
   <div class="marquee"><ul><li>Nuovo Pignone</li><li>Thermodyn</li><li>SKF</li><li>Eaton</li><li>Esaote</li><li>Meccaniche Pasquali</li><li>Pignone España</li><li>Innse Berardi</li><li>Axis</li><li>Inso</li><li>Quadrant EPP</li><li>BMV Presse</li></ul><ul aria-hidden="true"><li>Nuovo Pignone</li><li>Thermodyn</li><li>SKF</li><li>Eaton</li><li>Esaote</li><li>Meccaniche Pasquali</li><li>Pignone España</li><li>Innse Berardi</li><li>Axis</li><li>Inso</li><li>Quadrant EPP</li><li>BMV Presse</li></ul></div>
   <div class="marquee"><ul><li>Barracane</li><li>Carpresse</li><li>High Vacuum Process</li><li>Benelli Presse</li><li>Cima Impianti</li><li>Fabio Perini</li><li>Centrifughe Industriali</li><li>Servizi Industriali</li><li>Gambini</li><li>Proel Tecnologie</li><li>VAI Pomini</li></ul><ul aria-hidden="true"><li>Barracane</li><li>Carpresse</li><li>High Vacuum Process</li><li>Benelli Presse</li><li>Cima Impianti</li><li>Fabio Perini</li><li>Centrifughe Industriali</li><li>Servizi Industriali</li><li>Gambini</li><li>Proel Tecnologie</li><li>VAI Pomini</li></ul></div>
+  </div>
 </section>
 
 <section class="join" aria-labelledby="c-title">
   <div class="wrap">
+   <div class="join-card">
     <div class="rv">
       <span class="eyebrow">Lavora con noi</span>
       <h2 id="c-title">Cresci con noi in officina</h2>
       <p>Cerchiamo persone appassionate di meccanica: operatori CNC, addetti al controllo qualità, tecnici. Inviaci il tuo curriculum.</p>
     </div>
     <a class="btn btn-lime rv" href="pagine/contatti.html#lavora-con-noi">Candidati <svg><use href="#arrow"/></svg></a>
+   </div>
   </div>
 </section>
 </main>
@@ -226,5 +251,6 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="js/mappa.js"></script>
 </body>
 </html>
