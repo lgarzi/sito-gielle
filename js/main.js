@@ -1,14 +1,23 @@
 (function(){
-  var hdr=document.getElementById('hdr'),hero=document.querySelector('.hero'),burger=document.getElementById('burger');
+  var hdr=document.getElementById('hdr'),burger=document.getElementById('burger');
+  // Tutte le pagine: header trasparente in cima, .header--scrolled appena si scende di 10px.
   function onScroll(){
-    var lim=Math.max(40,hero.offsetHeight-hdr.offsetHeight-40);
-    hdr.classList.toggle('solid',window.scrollY>lim&&!hdr.classList.contains('open'));
+    if(!hdr)return;
+    hdr.classList.toggle('header--scrolled',window.scrollY>10&&!hdr.classList.contains('open'));
   }
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-  burger.addEventListener('click',function(){
-    var o=hdr.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Chiudi il menu':'Apri il menu');onScroll();
-  });
-  document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open');burger.setAttribute('aria-expanded','false');onScroll();});});
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('pageshow',onScroll);
+  onScroll();
+  // Stato iniziale senza transizioni: le attiva solo dopo il caricamento (e l'eventuale ripristino dello scroll al refresh)
+  if(hdr&&hdr.classList.contains('header--init')){
+    window.addEventListener('load',function(){onScroll();setTimeout(function(){onScroll();hdr.classList.remove('header--init');},150);});
+  }
+  if(burger){
+    burger.addEventListener('click',function(){
+      var o=hdr.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Chiudi il menu':'Apri il menu');onScroll();
+    });
+  }
+  document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){if(!hdr)return;hdr.classList.remove('open');burger&&burger.setAttribute('aria-expanded','false');onScroll();});});
 
   // Comparsa allo scroll: solo gli elementi fuori schermo partono nascosti
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
