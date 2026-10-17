@@ -19,4 +19,21 @@
     });
   }
 
+  // Moduli: controllo dei campi obbligatori. L'invio vero va collegato a un servizio (vedi README).
+  document.querySelectorAll('form[data-demo]').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var msg=f.querySelector('.form-msg'),bad=[];
+      f.querySelectorAll('[required]').forEach(function(el){
+        var ok=el.type==='checkbox'?el.checked:el.type==='email'?/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value):el.type==='file'?el.files.length>0:el.value.trim()!=='';
+        el.classList.toggle('invalid',!ok);if(!ok)bad.push(el);
+      });
+      var file=f.querySelector('input[name="curriculum"]');
+      if(file&&file.files[0]&&file.files[0].size>5*1024*1024){file.classList.add('invalid');bad.push(file);}
+      if(bad.length){msg.className='form-msg err';msg.textContent='Controlla i campi evidenziati.';bad[0].focus();return;}
+      msg.className='form-msg ok';msg.textContent='Grazie! Il modulo è compilato correttamente (invio non ancora attivo in questa versione).';
+      f.reset();
+    });
+  });
+
 })();
