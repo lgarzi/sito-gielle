@@ -6,13 +6,14 @@ Sito statico: HTML, CSS e JavaScript senza dipendenze né build.
 ## Struttura
 
 ```
-index.html          Home
-storia.html         Storia
-qualita.html        Qualità (certificazioni, laboratorio, CND, metrologia)
-ambiti.html         Ambiti (settori, materiali, servizi)
-tecnologie.html     Tecnologie (parco macchine reparto per reparto)
-contatti.html       Contatti, modulo richieste e sezione "Lavora con noi" con invio CV
-privacy.html        Privacy Policy (testo da inserire)
+index.html          Home (resta nella cartella principale: è la prima pagina che si apre)
+pagine/             Le altre pagine del sito
+  storia.html         Storia
+  qualita.html        Qualità (certificazioni, laboratorio, CND, metrologia)
+  ambiti.html         Ambiti (settori, materiali, servizi)
+  tecnologie.html     Tecnologie (parco macchine reparto per reparto)
+  contatti.html       Contatti, modulo richieste e "Lavora con noi" con invio CV
+  privacy.html        Privacy Policy (testo da inserire)
 css/style.css       Stili (colori, font, layout responsive)
 js/main.js          Header allo scroll, menu mobile, animazioni di comparsa
 assets/img/         Foto (per ora segnaposto da sostituire con foto reali)
