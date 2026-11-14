@@ -339,6 +339,32 @@ body::before{display:none}
 .form.dark .form-msg.ok{color:var(--lime)}
 .form.dark .form-msg.err{color:#FF8A7A}
 .prose{max-width:760px}
+/* Tecnologie, lavorazioni esterne: tre gruppi di trattamenti e il percorso del pezzo */
+.ext-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.6cqi,24px)}
+.ext-card{background:var(--paper);border-top:3px solid var(--lime);padding:clamp(24px,2.8cqi,38px);display:grid;gap:14px;align-content:start;transition:transform .3s,box-shadow .3s}
+.ext-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px -22px rgba(35,31,32,.35)}
+.ext-n{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.14em;color:var(--lime-deep)}
+.ext-card h3{font-size:clamp(26px,2.4cqi,32px)}
+.ext-card ul{list-style:none;margin:6px 0 0;padding:0;display:grid}
+.ext-card li{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--steel-300);color:var(--steel-700);font-size:16.5px}
+.ext-card li::before{content:"";flex:none;width:9px;height:10.5px;background:var(--lime-deep);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.ext-flow{list-style:none;margin:clamp(28px,3.5cqi,48px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));counter-reset:ef;border:1px solid var(--steel-300);background:var(--paper)}
+.ext-flow li{counter-increment:ef;position:relative;padding:18px 22px 18px 54px;font-family:var(--f-display);font-weight:600;font-size:18px;letter-spacing:.02em;line-height:1.2;display:flex;align-items:center}
+.ext-flow li+li{border-left:1px solid var(--steel-300)}
+.ext-flow li::before{content:counter(ef);position:absolute;left:20px;top:50%;transform:translateY(-50%);width:24px;height:27px;display:grid;place-items:center;font-family:var(--f-mono);font-size:12px;font-weight:500;background:var(--ink);color:var(--lime);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.ext-flow li:nth-child(2)::before{background:var(--lime);color:var(--ink)}
+@container site (max-width:1060px){
+  .ext-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ext-flow li:nth-child(3){border-left:0}
+  .ext-flow li:nth-child(n+3){border-top:1px solid var(--steel-300)}
+}
+@container site (max-width:820px){
+  .ext-grid{grid-template-columns:minmax(0,1fr)}
+}
+@container site (max-width:560px){
+  .ext-flow{grid-template-columns:minmax(0,1fr)}
+  .ext-flow li+li{border-left:0;border-top:1px solid var(--steel-300)}
+}
 .cta-band .wrap{padding-block:clamp(64px,7cqi,100px)}
 
 /* ---------- Home ---------- */
