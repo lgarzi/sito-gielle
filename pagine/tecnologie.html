@@ -25,7 +25,7 @@
 
 <div class="site" id="top">
 
-<header class="header" id="hdr">
+<header class="header header--init" id="hdr">
   <div class="wrap">
     <a class="brand" href="../index.html" aria-label="Gielle S.r.l. – Home">
       <svg viewBox="0 0 187.78 211.13" aria-hidden="true"><use href="#gl"/></svg>
@@ -34,9 +34,9 @@
     <nav class="nav" aria-label="Menu principale">
       <a href="../index.html">Home</a>
       <a href="storia.html">Storia</a>
-      <a href="qualita.html">Qualità</a>
       <a href="ambiti.html">Ambiti</a>
       <a href="tecnologie.html" aria-current="page">Tecnologie</a>
+      <a href="qualita.html">Qualità</a>
       <a href="contatti.html">Contatti</a>
       <a class="lang" href="#" lang="en" hreflang="en" title="English version (in preparazione)">EN</a>
     </nav>
@@ -45,9 +45,9 @@
   <nav class="mnav" id="mnav" aria-label="Menu mobile"><div class="mwrap">
     <a href="../index.html">Home <span>01</span></a>
     <a href="storia.html">Storia <span>02</span></a>
-    <a href="qualita.html">Qualità <span>03</span></a>
-    <a href="ambiti.html">Ambiti <span>04</span></a>
-    <a href="tecnologie.html" aria-current="page">Tecnologie <span>05</span></a>
+    <a href="ambiti.html">Ambiti <span>03</span></a>
+    <a href="tecnologie.html" aria-current="page">Tecnologie <span>04</span></a>
+    <a href="qualita.html">Qualità <span>05</span></a>
     <a href="contatti.html">Contatti <span>06</span></a>
     <a href="#" lang="en">English <span>EN</span></a>
   </div></nav>
@@ -56,7 +56,6 @@
 <main>
 <section class="hero phero" aria-labelledby="page-title">
   <div class="hero-media phero-media" style="background-image:url(../assets/img/officina.jpg)" aria-hidden="true"></div>
-  <span class="ph-tag">Segnaposto · reparto macchine CNC</span>
   <div class="wrap">
     <nav class="crumb" aria-label="Percorso"><a href="../index.html">Home</a><span>/</span>Tecnologie</nav>
     <h1 id="page-title">La nostra <em>officina</em></h1>
@@ -86,7 +85,6 @@
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <span class="eyebrow">Reparto 01</span>
         <h2 id="t-tornitura">Tornitura</h2>
       </div>
       <p>Torni CNC orizzontali e verticali, fino a 1600 mm di diametro e 2000 mm di lunghezza.</p>
@@ -118,7 +116,6 @@
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <span class="eyebrow">Reparto 02</span>
         <h2 id="t-fresatura">Fresatura</h2>
       </div>
       <p>Centri di lavoro fino a 5 assi e fresatrici a portale. Corse X × Y × Z in mm.</p>
@@ -146,7 +143,6 @@
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <span class="eyebrow">Reparto 03</span>
         <h2 id="t-edm">Elettroerosione</h2>
       </div>
       <p>Per profili complessi e materiali difficili da lavorare con utensile.</p>
@@ -163,7 +159,6 @@
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <span class="eyebrow">Reparto 04</span>
         <h2 id="t-rettifica">Rettifica</h2>
       </div>
       <p>Rettifica circolare, tangenziale e lappatura per tolleranze e finiture superficiali strette.</p>
@@ -184,7 +179,6 @@
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <span class="eyebrow">Reparto 05</span>
         <h2 id="t-taglio">Taglio</h2>
       </div>
       <p>Preparazione del materiale da barra.</p>
@@ -205,25 +199,47 @@
   <div class="wrap split-grid">
     <div class="media rv" style="background-image:url(../assets/img/metrologia.jpg)" role="img" aria-label="Sala metrologica">
       <span class="frame"></span>
-      <span class="ph-tag">Segnaposto · sala metrologica</span>
     </div>
     <div class="rv">
-      <span class="eyebrow">Reparto 06</span>
       <h2 id="t-metro">Metrologia</h2>
       <p class="lead">Macchina di misura tridimensionale Mitutoyo Crysta Apex 7106 con testina basculante a scansione continua, proiettore di profili, rugosimetro, altimetro digitale e microscopio.</p>
-      <a class="btn btn-ink" href="qualita.html">Qualità e laboratorio <svg><use href="#arrow"/></svg></a>
+      <a class="btn btn-ink" href="qualita.html">Scopri la qualità <svg><use href="#arrow"/></svg></a>
     </div>
   </div>
 </section>
 
-<section class="sec alt" id="esterne" aria-labelledby="t-est">
-  <div class="wrap intro-grid">
-    <div class="rv">
-      <span class="eyebrow">Lavorazioni esterne</span>
-      <h2 id="t-est">Il pezzo finito, chiavi in mano</h2>
-      <p class="lead">Gestiamo noi i trattamenti affidati a fornitori qualificati, così ricevi il pezzo completo.</p>
+<section class="sec alt ext" id="esterne" aria-labelledby="t-est">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Lavorazioni esterne</span>
+        <h2 id="t-est">Trattamenti e finiture</h2>
+      </div>
+      <p>Per i trattamenti che non eseguiamo in sede ci affidiamo a fornitori qualificati: coordiniamo noi tempi e controlli, così ricevi il pezzo completo.</p>
     </div>
-    <ul class="tags big rv"><li>Trattamenti termici in atmosfera controllata</li><li>Trattamenti termici sotto vuoto</li><li>Trattamenti galvanici</li><li>Sabbiatura</li><li>Verniciatura</li><li>Riporti in Stellite e Colmonoy</li><li>Riporti con materiali abradibili</li></ul>
+    <div class="ext-grid">
+      <div class="ext-card rv">
+        <span class="ext-n">01</span>
+        <h3>Trattamenti termici</h3>
+        <ul><li>In atmosfera controllata</li><li>Sotto vuoto</li></ul>
+      </div>
+      <div class="ext-card rv">
+        <span class="ext-n">02</span>
+        <h3>Trattamenti superficiali</h3>
+        <ul><li>Trattamenti galvanici</li><li>Sabbiatura</li><li>Verniciatura</li></ul>
+      </div>
+      <div class="ext-card rv">
+        <span class="ext-n">03</span>
+        <h3>Riporti</h3>
+        <ul><li>Stellite e Colmonoy</li><li>Materiali abradibili</li></ul>
+      </div>
+    </div>
+    <ol class="ext-flow rv" aria-label="Come gestiamo le lavorazioni esterne">
+      <li>Lavorazione in Gielle</li>
+      <li>Trattamento dal fornitore</li>
+      <li>Controllo e collaudo in Gielle</li>
+      <li>Consegna del pezzo finito</li>
+    </ol>
   </div>
 </section>
 <section class="careers cta-band" aria-labelledby="cta-title">
@@ -258,9 +274,9 @@
         <ul class="f-links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="storia.html">Storia</a></li>
-          <li><a href="qualita.html">Qualità</a></li>
           <li><a href="ambiti.html">Ambiti</a></li>
           <li><a href="tecnologie.html">Tecnologie</a></li>
+          <li><a href="qualita.html">Qualità</a></li>
           <li><a href="contatti.html">Contatti</a></li>
         </ul>
       </div>
