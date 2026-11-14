@@ -245,6 +245,7 @@ body::before{display:none}
 
 /* Passi del processo */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,2.4cqi,36px)}
+.steps.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .steps li{border-top:2px solid var(--ink);padding-top:22px;display:grid;gap:10px;align-content:start}
 .step-n{font-family:var(--f-mono);font-size:13px;color:var(--lime-deep);letter-spacing:.1em}
 .steps h3{font-size:28px}
@@ -495,7 +496,7 @@ body::before{display:none}
 /* ---------- Pagine interne: responsive ---------- */
 @container site (max-width:1060px){
   .trio.four{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .steps,.ndt{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps,.steps.three,.ndt{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @container site (max-width:820px){
   .intro-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
@@ -511,7 +512,7 @@ body::before{display:none}
   .tl-item{grid-template-columns:minmax(0,1fr);gap:4px;padding-left:34px}
   .tl-item::before{left:-1px;top:30px}
   .tl-year{font-size:40px}
-  .trio.four,.steps,.ndt{grid-template-columns:minmax(0,1fr)}
+  .trio.four,.steps,.steps.three,.ndt{grid-template-columns:minmax(0,1fr)}
   .sector{grid-template-columns:minmax(0,1fr)}
   .sector .ico{grid-row:auto;width:48px;height:48px;margin-bottom:10px}
   .frow{grid-template-columns:minmax(0,1fr)}
